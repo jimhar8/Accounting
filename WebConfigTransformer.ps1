@@ -9,7 +9,7 @@
 
     Add-Type -LiteralPath "$solution_dir\packages\MSBuild.Microsoft.VisualStudio.Web.targets.14.0.0.3\tools\VSToolsPath\Web\Microsoft.Web.XmlTransform.dll"
 
-    
+      
     New-Item -ItemType directory -Path "$output_path\TransformedConfigs" -Force
 
 	ls $project_dir -Filter "Web.*.config" -Exclude "web.config" ,"web.release.config", "web.debug.config" -Recurse |% {
